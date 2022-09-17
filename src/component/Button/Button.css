@@ -1,0 +1,14 @@
+.button__wrapper {
+    width: 100%;
+}
+.button__wrapper button {
+    border-radius: 5px;
+    border: none;
+    height: 32px;
+    width: 100%;
+}
+
+.button__wrapper button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}

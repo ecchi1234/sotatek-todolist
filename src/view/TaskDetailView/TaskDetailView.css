@@ -1,0 +1,28 @@
+.page-detail__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.page-detail__wrapper .page-detail__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 500px;
+}
+
+.add-button button {
+    background-color: green;
+    color: white;
+}
+
+.flex-box-layout {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}

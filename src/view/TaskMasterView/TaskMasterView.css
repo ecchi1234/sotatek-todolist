@@ -1,0 +1,4 @@
+.page-master__wrapper {
+    display: flex;
+    gap: 20px;
+}

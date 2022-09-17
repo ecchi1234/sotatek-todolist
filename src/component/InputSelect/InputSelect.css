@@ -1,0 +1,10 @@
+.input-select__wrapper {
+    width: 100%;
+}
+.input-select__wrapper select {
+    height: 32px;
+    width: 100%;
+}
+.input-select__wrapper select option {
+    height: 32px;
+}

@@ -1,0 +1,7 @@
+.input-text__wrapper {
+    width: 100%;
+}
+.input-text__wrapper input {
+    height: 32px;
+    width: 100%;
+}

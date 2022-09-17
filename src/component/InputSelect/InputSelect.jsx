@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
 import "./InputSelect.css";
 function InputSelect({
   onChange,
@@ -10,7 +11,7 @@ function InputSelect({
 }) {
   return (
     <div className="input-select__wrapper">
-      <label>{title}</label>
+      <div className="title">{title}</div>
       <select
         name={field}
         id={field}
@@ -21,7 +22,11 @@ function InputSelect({
         {listOption &&
           listOption.length > 0 &&
           listOption.map((optionItem) => {
-            return <option value={optionItem.value}>{optionItem.name}</option>;
+            return (
+              <option value={optionItem.id} key={uuidv4()}>
+                {optionItem.name}
+              </option>
+            );
           })}
       </select>
     </div>

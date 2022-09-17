@@ -1,0 +1,7 @@
+.date-picker__wrapper {
+    width: 100%;
+}
+.date-picker__wrapper input {
+    height: 32px;
+    width: 100%;
+}

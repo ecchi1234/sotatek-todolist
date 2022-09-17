@@ -1,15 +1,16 @@
 import React from "react";
 import "./InputText.css";
-function InputText({ onBlur, value, title, placeholder }) {
+function InputText({ onChange, value, title, placeholder, errorMessage }) {
   return (
     <div className="input-text__wrapper">
-      <label>{title}</label>
+      <div className="title">{title}</div>
       <input
         type="text"
         value={value}
-        onBlur={onBlur}
+        onChange={onChange}
         placeholder={placeholder}
       ></input>
+      <div>{errorMessage}</div>
     </div>
   );
 }
