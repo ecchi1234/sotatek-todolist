@@ -1,0 +1,26 @@
+.todo-item__wrapper .todo-item__container {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.todo-item__wrapper .todo-item__container .todo-item__checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.todo-item__wrapper .todo-item__container .todo-item__action {
+    display: flex;
+    gap: 10px;
+}
+
+.todo-item__action .button-update button {
+    background-color: #13c2c2;
+    color: var(--white);
+}
+
+.todo-item__action .button-remove button {
+    background-color: #ff4d4f;
+    color: var(--white);
+}

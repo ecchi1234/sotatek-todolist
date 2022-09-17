@@ -6,21 +6,6 @@ function useTaskDetailViewHook(
   setCurrentListTask,
   currentTask
 ) {
-  const listPriorityOption = [
-    {
-      id: 1,
-      name: "Low",
-    },
-    {
-      id: 2,
-      name: "Normal",
-    },
-    {
-      id: 3,
-      name: "High",
-    },
-  ];
-
   const [taskItem, setTaskItem] = useState({
     taskTitle: "",
     taskDescription: "",
@@ -62,7 +47,6 @@ function useTaskDetailViewHook(
   );
 
   return {
-    listPriorityOption,
     handleAddNewTask,
     taskItem,
     setTaskItem,

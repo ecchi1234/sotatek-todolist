@@ -5,9 +5,10 @@ import DatePicker from "../../component/DatePicker/DatePicker";
 import InputSelect from "../../component/InputSelect/InputSelect";
 import Button from "../../component/Button/Button";
 import useTaskDetailViewHook from "./TaskDetailViewHook";
+import { listPriorityOption } from "../../config/const";
 import "./TaskDetailView.css";
 function TaskDetailView({ currentListTask, setCurrentListTask, currentTask }) {
-  const { listPriorityOption, taskItem, handleChangeField, handleAddNewTask } =
+  const { taskItem, handleChangeField, handleAddNewTask } =
     useTaskDetailViewHook(currentListTask, setCurrentListTask, currentTask);
   return (
     <div className="page-detail__wrapper">

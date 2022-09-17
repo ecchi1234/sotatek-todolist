@@ -1,4 +1,44 @@
 .page-master__wrapper {
     display: flex;
     gap: 20px;
+    align-items: flex-start;
+}
+.page-master__wrapper .todo-list__container {
+    width: calc(100% - 200px);
+}
+.page-master__wrapper div .todo-list__section {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 30px;
+
+    border-radius: 7px;
+}
+
+.page-master__wrapper div .todo-list__section .section__title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.list__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.bulk-action {
+    border-radius: 7px;
+    display: flex;
+    padding: 10px 30px 10px 30px;
+    justify-content: space-between;
+    margin-top: 10px;
+    background-color: var(--white);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.bulk-action .button-done button {
+    background-color: #40a9ff;
+    color: var(--white);
+}
+
+.bulk-action .button-remove button {
+    background-color: #ff4d4f;
+    color: var(--white);
 }

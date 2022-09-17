@@ -3,7 +3,7 @@ import "./App.css";
 function App() {
   return (
     <div className="app">
-      <h2>TodoListApp</h2>
+      <div className="app__title">TodoListApp</div>
       <TaskMasterView />
     </div>
   );

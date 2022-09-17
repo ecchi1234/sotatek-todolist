@@ -9,7 +9,6 @@ function DatePicker({ onChange, value, title, placeholder, formatDate }) {
         onChange={onChange}
         value={value}
         placeholder={placeholder}
-        forma
       ></input>
     </div>
   );
