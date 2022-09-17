@@ -21,6 +21,7 @@ function TaskDetailView({ currentListTask, setCurrentListTask, currentTask }) {
               placeholder={"Add new task..."}
               value={taskItem?.taskTitle}
               onChange={handleChangeField("taskTitle")}
+              isRequired={true}
             />
           </div>
 

@@ -1,6 +1,6 @@
 import React from "react";
 import "./InputText.css";
-function InputText({ onChange, value, title, placeholder, errorMessage }) {
+function InputText({ onChange, value, title, placeholder, isRequired }) {
   return (
     <div className="input-text__wrapper">
       <div className="title">{title}</div>
@@ -9,8 +9,8 @@ function InputText({ onChange, value, title, placeholder, errorMessage }) {
         value={value}
         onChange={onChange}
         placeholder={placeholder}
+        isRequired={isRequired}
       ></input>
-      <div>{errorMessage}</div>
     </div>
   );
 }

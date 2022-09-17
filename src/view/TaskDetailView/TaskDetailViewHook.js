@@ -22,8 +22,6 @@ function useTaskDetailViewHook(
 
   const handleAddNewTask = useCallback(
     (newTask) => {
-      // validate task title
-
       const newListTask = [...currentListTask, { ...newTask, id: uuidv4() }];
       setCurrentListTask(newListTask);
       localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newListTask));
