@@ -8,7 +8,7 @@ import useTaskDetailViewHook from "./TaskDetailViewHook";
 import { listPriorityOption } from "../../config/const";
 import "./TaskDetailView.css";
 function TaskDetailView({ currentListTask, setCurrentListTask, currentTask }) {
-  const { taskItem, handleChangeField, handleAddNewTask } =
+  const { taskItem, handleChangeField, handleAddNewTask, errorMessage } =
     useTaskDetailViewHook(currentListTask, setCurrentListTask, currentTask);
   return (
     <div className="page-detail__wrapper">
@@ -22,6 +22,7 @@ function TaskDetailView({ currentListTask, setCurrentListTask, currentTask }) {
               value={taskItem?.taskTitle}
               onChange={handleChangeField("taskTitle")}
               isRequired={true}
+              errorMessage={errorMessage}
             />
           </div>
 

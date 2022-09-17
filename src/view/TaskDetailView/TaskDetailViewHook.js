@@ -20,18 +20,25 @@ function useTaskDetailViewHook(
     }
   }, [currentTask]);
 
+  const [errorMessage, setErrorMessage] = useState("");
+
   const handleAddNewTask = useCallback(
     (newTask) => {
-      const newListTask = [...currentListTask, { ...newTask, id: uuidv4() }];
-      setCurrentListTask(newListTask);
-      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newListTask));
-      setTaskItem({
-        taskTitle: "",
-        taskDescription: "",
-        dueDate: "",
-        priority: 2,
-        id: "",
-      });
+      if (newTask?.taskTitle) {
+        const newListTask = [...currentListTask, { ...newTask, id: uuidv4() }];
+        setCurrentListTask(newListTask);
+        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newListTask));
+        setTaskItem({
+          taskTitle: "",
+          taskDescription: "",
+          dueDate: "",
+          priority: 2,
+          id: "",
+        });
+        setErrorMessage("");
+      } else {
+        setErrorMessage("You have to fill this information");
+      }
     },
     [currentListTask, setCurrentListTask]
   );
@@ -49,6 +56,7 @@ function useTaskDetailViewHook(
     taskItem,
     setTaskItem,
     handleChangeField,
+    errorMessage,
   };
 }
 export default useTaskDetailViewHook;
